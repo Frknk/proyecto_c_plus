@@ -13,7 +13,7 @@ protected:
 public:
     // Metodos
     // Constructor
-    Cliente(string _nombre, string _apellido, string _direccion, string _telefono, string _DNI)
+    Cliente(string _nombre = "", string _apellido = "", string _direccion = "", string _telefono = "", string _DNI = "")
     {
         nombre = _nombre;
         apellido = _apellido;
@@ -82,5 +82,11 @@ public:
     void setUID(string _UID)
     {
         UID = _UID;
+    }
+
+    // Metodos
+    string getDatos()
+    {
+        return "Nombre: " + nombre + " | Apellido: " + apellido + "\nDireccion: " + direccion + "\nTelefono: " + telefono + "\nDNI: " + DNI;
     }
 };
