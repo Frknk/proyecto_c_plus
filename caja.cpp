@@ -8,9 +8,6 @@ using namespace std;
 
 class Caja
 {
-private:
-
-
 public:
     // Funcion para el ingreso en la base de datos (TXT)
     void ingresoBD(Cajero cajero, Cliente cliente)
