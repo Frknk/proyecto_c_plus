@@ -16,7 +16,7 @@ public:
     }
 
     // Metodos
-    string getCDatos()
+    string getDatos()
     {
         return "Datos del cajero: \n " + c_codigo + " " + c_apellido + " " + c_nombre;
     }
