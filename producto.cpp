@@ -8,7 +8,7 @@ protected:
     string id, nombre;
     float precio;
 public:
-    Producto(string _id, float _precio, string _nombre)
+    Producto(string _id=" ", float _precio=0, string _nombre=" ")
     {
         id = _id;
         precio = _precio;
