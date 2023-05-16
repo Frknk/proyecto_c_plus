@@ -8,9 +8,9 @@ class Libreria : public Producto{
     string titulo, autor, editorial;
 
     public:
-    Libreria(string _id, float _precio, string _titulo = "", string _autor = "", string _editorial = "") : Producto (_id, _precio)
+    Libreria(string _id, float _precio, string _nombre = "", string _autor = "", string _editorial = "") : Producto (_id, _precio, _nombre)
     {
-        titulo = _titulo;
+        titulo = _nombre;
         autor = _autor;
         editorial = _editorial;
     }

@@ -5,13 +5,14 @@ using namespace std;
 class Producto
 {
 protected:
-    string id;
+    string id, nombre;
     float precio;
 public:
-    Producto(string _id, float _precio)
+    Producto(string _id, float _precio, string _nombre)
     {
         id = _id;
         precio = _precio;
+        nombre = _nombre;
     }
 
     // Getter
@@ -21,6 +22,10 @@ public:
 
     float getPrecio(){
         return precio;
+    }
+
+    string getNombre(){
+        return nombre;
     }
 
     string getPrecioString(){
