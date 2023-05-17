@@ -1,5 +1,10 @@
 #include <iostream>
+#include <fstream>
 #include "libreria.cpp"
+#include "cajero.cpp"
+#include "cliente.cpp"
+#include "caja.cpp"
+#include "producto.cpp"
 
 using namespace std;
 
