@@ -1,5 +1,5 @@
 #include <string>
-#include "producto.cpp"
+#include "jugueteria.cpp"
 
 using namespace std;
 

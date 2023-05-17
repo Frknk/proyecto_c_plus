@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "producto.cpp"
+#include "libreria.cpp"
 
 using namespace std;
 
