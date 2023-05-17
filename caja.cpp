@@ -2,18 +2,14 @@
 #include <fstream>
 #include "cliente.cpp"
 #include "cajero.cpp"
-#include "vestimenta.cpp"
+#include "producto.cpp"
 
 using namespace std;
 
 class Caja
 {
 protected:
-    Ferreteria ferreteria[99];
-    Electronica electronica[99];
-    Libreria libreria[99];
-    Jugueteria jugueteria[99];
-    Vestimenta vestimenta[99];
+    Producto productos[99];
     int contadorFerreteria = 0;
     int contadorElectronica = 0;
     int contadorLibreria = 0;
@@ -23,63 +19,47 @@ protected:
     string carrito = "";
 
 public:
+    // Constructor
+    Caja()
+    {
+    }
     // Funcion sobrecargada
-    void agregarCarrito(Ferreteria ferreteria_item)
+    void agregarCarrito(Producto producto_item)
     {
-        ferreteria[contadorFerreteria] = ferreteria_item;
-        contadorFerreteria++;
+        productos[contadorFerreteria] = producto_item;
         totalProductos++;
+        if (producto_item.getCategoria() == "ferrteria"){
+            contadorFerreteria++;
+        }
+        else if (producto_item.getCategoria() == "electronica"){
+            contadorElectronica++;
+        }
+        else if (producto_item.getCategoria() == "libreria"){
+            contadorLibreria++;
+        }
+        else if (producto_item.getCategoria() == "jugueteria"){
+            contadorJugueteria++;
+        }
+        else if (producto_item.getCategoria() == "vestimenta"){
+            contadorVestimenta++;
+        }
+        else {
+            cout << "Categoria no encontrada" << endl;
+        }
     }
 
-    void agregarCarrito(Electronica electronica_item)
-    {
-        electronica[contadorElectronica] = electronica_item;
-        contadorElectronica++;
-        totalProductos++;
-    }
+    void mostrarTienda(){
+        int lista = 0;
+        for (int i = 0; i < 99; i++){
+            cout << lista++ << productos[i].getDatos();
+        }
 
-    void agregarCarrito(Libreria libreria_item)
-    {
-        libreria[contadorLibreria] = libreria_item;
-        contadorLibreria++;
-        totalProductos++;
-    }
-
-    void agregarCarrito(Jugueteria jugueteria_item)
-    {
-        jugueteria[contadorJugueteria] = jugueteria_item;
-        contadorJugueteria++;
-        totalProductos++;
-    }
-
-    void agregarCarrito(Vestimenta vestimenta_item)
-    {
-        vestimenta[contadorVestimenta] = vestimenta_item;
-        contadorVestimenta++;
-        totalProductos++;
     }
 
     // Funcion para mostrar el carrito
     string mostrarCarrito(){
-        for (int i = 0; i < contadorFerreteria; i++)
-        {
-            carrito += ferreteria[i].getDatos() + "\n";
-        }
-        for (int i = 0; i < contadorElectronica; i++)
-        {
-            carrito += electronica[i].getDatos() + "\n";
-        }
-        for (int i = 0; i < contadorLibreria; i++)
-        {
-            carrito += libreria[i].getDatos() + "\n";
-        }
-        for (int i = 0; i < contadorJugueteria; i++)
-        {
-            carrito += jugueteria[i].getDatos() + "\n";
-        }
-        for (int i = 0; i < contadorVestimenta; i++)
-        {
-            carrito += vestimenta[i].getDatos() + "\n";
+        for (int i = 0; i < totalProductos; i++){
+            carrito += productos[i].getDatos();
         }
         return carrito;
     }
