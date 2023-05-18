@@ -23,7 +23,7 @@ public:
     Caja()
     {
     }
-    // Funcion sobrecargada
+    // Funcion para agregar al arreglo
     void agregarCarrito(Producto producto_item)
     {
         productos[contadorFerreteria] = producto_item;
