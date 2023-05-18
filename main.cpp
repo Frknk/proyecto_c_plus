@@ -94,6 +94,7 @@ int main()
         switch (opcion)
         {
         case 1:
+            // Comprar en la tienda
             system("cls");
             principal.mostrarTienda();
             cout << "\nIngrese el codigo del producto que desea comprar: ";
@@ -115,6 +116,7 @@ int main()
             cout << "\nProducto agregado correctamente\n";
             system("pause");
             break;
+            // Ver carrito
         case 2:
             system("cls");
             titulo_centrado("Carrito");
@@ -122,6 +124,7 @@ int main()
             cout << cliente.mostrarCarrito();
             system("pause");
             break;
+            // Pagar
         case 3:
             system("cls");
             titulo_centrado("Carrito");
@@ -158,6 +161,7 @@ int main()
             cliente.ingresoBD(gerente, comprador, "venta");
             system("pause");
             break;
+            // Administrar
         case 4:
             do
             {
@@ -247,10 +251,12 @@ int main()
 
             } while (admin_opcion2 != 5);
             break;
+            //Salir
         case 5:
             cout << "\nHasta pronto!";
             system("timeout 2 >nul");
             break;
+            // Opcion invalida
         default:
             cout << "\nOpcion invalida";
             system("timeout 2 >nul"); // Dormir por 2 segundos

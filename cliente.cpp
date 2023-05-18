@@ -13,7 +13,8 @@ protected:
 
 public:
     // Constructor
-    Cliente(string _cliente_codigo = "", string _apellido = "", string _nombre = "" , string _direccion = "", string _telefono = "", string _DNI = "") : Persona(_nombre, _apellido, _direccion, _telefono, _DNI)
+    Cliente(string _cliente_codigo = "", string _apellido = "", string _nombre = "" , string _direccion = "", 
+    string _telefono = "", string _DNI = "") : Persona(_nombre, _apellido, _direccion, _telefono, _DNI)
     {
         cliente_codigo = _cliente_codigo;
     }

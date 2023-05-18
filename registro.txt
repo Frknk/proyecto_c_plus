@@ -1,1 +1,7 @@
 
+[Compra registrada] 
+Datos del cajero: 
+ Denis Gonzalez
+Datos del cliente: 
+ UC01 Frank Rivera 77446655
+E001 - Electronica - Laptop - HP - Pavilion - Precio: 1000.000000 - Cantidad: 1

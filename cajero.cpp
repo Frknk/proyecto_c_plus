@@ -9,7 +9,9 @@ protected:
     string c_codigo, c_contrasena;
 
 public:
-    Cajero(string _c_codigo = "", string _c_contrasena = "", string _apellido= "", string _nombre= "" , string _direccion= "", string _telefono= "", string _DNI= "") : Persona(_nombre, _apellido, _direccion, _telefono, _DNI)
+    // Constructor
+    Cajero(string _c_codigo = "", string _c_contrasena = "", string _apellido= "", string _nombre= "" , 
+    string _direccion= "", string _telefono= "", string _DNI= "") : Persona(_nombre, _apellido, _direccion, _telefono, _DNI)
     {
         c_codigo = _c_codigo;
         c_contrasena = _c_contrasena;
