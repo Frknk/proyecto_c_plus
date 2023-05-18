@@ -28,19 +28,19 @@ public:
     {
         productos[contadorFerreteria] = producto_item;
         totalProductos++;
-        if (producto_item.getCategoria() == "ferrteria"){
+        if (producto_item.getCategoria() == "ferreteria" || producto_item.getCategoria() == "Ferreteria"){
             contadorFerreteria++;
         }
-        else if (producto_item.getCategoria() == "electronica"){
+        else if (producto_item.getCategoria() == "electronica" || producto_item.getCategoria() == "Electronica"){
             contadorElectronica++;
         }
-        else if (producto_item.getCategoria() == "libreria"){
+        else if (producto_item.getCategoria() == "libreria" || producto_item.getCategoria() == "Libreria" ){
             contadorLibreria++;
         }
-        else if (producto_item.getCategoria() == "jugueteria"){
+        else if (producto_item.getCategoria() == "jugueteria" || producto_item.getCategoria() == "Jugueteria"){
             contadorJugueteria++;
         }
-        else if (producto_item.getCategoria() == "vestimenta"){
+        else if (producto_item.getCategoria() == "vestimenta" || producto_item.getCategoria() == "Vestimenta"){
             contadorVestimenta++;
         }
         else {

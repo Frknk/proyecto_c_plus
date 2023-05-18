@@ -40,7 +40,7 @@ int main()
     int cantidad;
 
     // Cajero por defecto
-    Cajero cajero1("PJ001", "Perez", "Juan", "12345");
+    Cajero cajero1("PJ001", "12345", "Perez", "Juan");
 
     // Productos
     Producto electronica1("E001", "Electronica", 1000, "Laptop", 10);
@@ -48,7 +48,7 @@ int main()
     Producto libreria1("L001", "Libreria", 10, "Lapicero", 10);
     Producto jugueteria1("J001", "Jugueteria", 100, "Pelota", 10);
     Producto vestimenta1("V001", "Vestimenta", 100, "Camisa", 10);
-    
+
 
     // Registrando 
     Caja principal; // Para la tienda

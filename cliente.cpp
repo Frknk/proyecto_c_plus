@@ -1,92 +1,35 @@
 #include <string>
+#include "persona.cpp"
 
 using namespace std;
 
-class Cliente
+class Cliente : public Persona
 {
     // Atributos
-    // UID para registrar multiples compras con diferentes codigos a una sola persona
+    // cliente_codigo para registrar multiples compras con diferentes codigos a una sola persona
 protected:
     string nombre, apellido, direccion, telefono, DNI;
-    string UID;
+    string cliente_codigo;
 
 public:
     // Metodos
     // Constructor
-    Cliente(string _nombre = "", string _apellido = "", string _direccion = "", string _telefono = "", string _DNI = "")
+    Cliente(string _cliente_codigo = "", string _apellido = "", string _nombre = "" , string _direccion = "", string _telefono = "", string _DNI = "") : Persona(_nombre, _apellido, _direccion, _telefono, _DNI)
     {
-        nombre = _nombre;
-        apellido = _apellido;
-        direccion = _direccion;
-        telefono = _telefono;
-        DNI = _DNI;
+        cliente_codigo = _cliente_codigo;
     }
 
     // Getters
-    string getNombre()
-    {
-        return nombre;
-    }
-
-    string getApellido()
-    {
-        return apellido;
-    }
-
-    string getDireccion()
-    {
-        return direccion;
-    }
-
-    string getTelefono()
-    {
-        return telefono;
-    }
-
-    string getDNI()
-    {
-        return DNI;
-    }
-
-    string getUID()
-    {
-        return UID;
+    string getClienteCodigo(){
+        return cliente_codigo;
     }
 
     // Setters
-    void setNombre(string _nombre)
-    {
-        nombre = _nombre;
+    void setClienteCodigo(string _cliente_codigo){
+        cliente_codigo = _cliente_codigo;
     }
 
-    void setApellido(string _apellido)
-    {
-        apellido = _apellido;
-    }
-
-    void setDireccion(string _direccion)
-    {
-        direccion = _direccion;
-    }
-
-    void setTelefono(string _telefono)
-    {
-        telefono = _telefono;
-    }
-
-    void setDNI(string _DNI)
-    {
-        DNI = _DNI;
-    }
-
-    void setUID(string _UID)
-    {
-        UID = _UID;
-    }
-
-    // Metodos
-    string getDatos()
-    {
-        return "Nombre: " + nombre + " | Apellido: " + apellido + "\nDireccion: " + direccion + "\nTelefono: " + telefono + "\nDNI: " + DNI;
+    string getDatos(){
+        return "Datos del cliente: \n " + cliente_codigo + " " + getApellido() + " " + getNombre();
     }
 };

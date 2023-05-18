@@ -1,25 +1,24 @@
 #include <string>
+#include "cliente.cpp"
 
 using namespace std;
 
-class Cajero
+class Cajero : public Persona
 {
 protected:
-    string c_codigo, c_apellido, c_nombre, c_contrasena;
+    string c_codigo, c_contrasena;
 
 public:
-    Cajero(string _c_codigo = "", string _c_apellido = "", string _c_nombre = "", string _c_contrasena = "")
+    Cajero(string _c_codigo = "", string _c_contrasena = "", string _apellido, string _nombre , string _direccion, string _telefono, string _DNI) : Persona(_nombre, _apellido, _direccion, _telefono, _DNI)
     {
         c_codigo = _c_codigo;
-        c_apellido = _c_apellido;
-        c_nombre = _c_nombre;
         c_contrasena = _c_contrasena;
     }
 
     // Metodos
     string getDatos()
     {
-        return "Datos del cajero: \n " + c_codigo + " " + c_apellido + " " + c_nombre;
+        return "Datos del cajero: \n " + c_codigo + " " + getApellido() + " " + getNombre();
     }
 
     string getCodigo()
