@@ -190,6 +190,7 @@ int main()
                 switch (admin_opcion2)
                 {
                 case 1:
+                // Agregar producto
                     system("cls");
                     titulo_centrado("Admin Denis");
                     principal.crearProducto(ejemplo);
@@ -200,6 +201,7 @@ int main()
                     system("timeout 2 >nul");
                     break;
                 case 2:
+                // Eliminar producto
                     system("cls");
                     titulo_centrado("Admin Denis");
                     cout << "Ingrese el codigo del producto que desea eliminar: ";
@@ -215,6 +217,7 @@ int main()
                     principal.ingresoBD(gerente, comprador, "producto_eliminado");
                     system("timeout 2 >nul");
                     break;
+                // Modificar producto
                 case 3:
                     system("cls");
                     titulo_centrado("Admin Denis");
@@ -233,12 +236,14 @@ int main()
                     principal.ingresoBD(gerente, comprador, "producto_modificado");
                     system("timeout 2 >nul");
                     break;
+                // Ver productos
                 case 4:
                     system("cls");
                     titulo_centrado("Admin Denis");
                     cliente.mostrarCarrito();
                     system("pause");
                     break;
+                // Salir
                 case 5:
                     cout << "Hasta pronto";
                     system("timeout 2 >nul");
@@ -263,5 +268,5 @@ int main()
             break;
         }
 
-    } while (opcion != 5);
+    } while (opcion != 5); // Salir al elegir 5
 }
