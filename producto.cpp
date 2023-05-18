@@ -19,11 +19,12 @@ protected:
     string tipo, marca, modelo;
 
 public:
-    Producto(string _id = " ", string _categoria = "", float _precio = 0, int _cantidad = 0, string _nombre = " ")
+    Producto(string _id = "", string _categoria = "", float _precio = 0.0, int _cantidad = 0, string _nombre = "")
     {
         id = _id;
         precio = _precio;
         nombre = _nombre;
+        categoria = _categoria;
         cantidad = _cantidad;
     }
 
@@ -66,6 +67,11 @@ public:
         id = _id;
     }
 
+    void setMarca(string _marca)
+    {
+        marca = _marca;
+    }
+
     void setPrecio(float _precio)
     {
         precio = _precio;
@@ -86,6 +92,45 @@ public:
         categoria = _categoria;
     }
 
+    void setModelo(string _modelo)
+    {
+        modelo = _modelo;
+    }
+
+    void setAutor(string _autor)
+    {
+        autor = _autor;
+    }
+
+    void setEditorial(string _editorial)
+    {
+        editorial = _editorial;
+    }
+
+    void setEducativo(bool _es_educativo)
+    {
+        es_educativo = _es_educativo;
+    }
+
+    void setTalla(string _talla)
+    {
+        talla = _talla;
+    }
+
+    void setColor(string _color)
+    {
+        color = _color;
+    }
+
+    void setMaterial(string _material)
+    {
+        material = _material;
+    }
+
+    void setTipo(string _tipo)
+    {
+        tipo = _tipo;
+    }
     // Getter
     string getId()
     {
@@ -137,29 +182,29 @@ public:
 
     string getDatos()
     {
-        if (getCategoria() == "Vestimenta" || getCategoria() == "vestimenta")
+        if (categoria == "Vestimenta" || categoria == "vestimenta")
         {
-            return id + "," + categoria + "," + "," + getPrecioString() + nombre + "," + getCantidadString() + "," + talla + "," + color + "," + material;
+            return id + " - " + categoria + " - " + nombre + " - " + " - " + talla + " - " + color + " - " + material + " - Precio: " + getPrecioString() + " - Cantidad: " + getCantidadString();
         }
-        else if (getCategoria() == "Electronica" || getCategoria() == "electronica")
+        else if (categoria == "Electronica" || categoria == "electronica")
         {
-            return id + "," + categoria + "," + "," + getPrecioString() + nombre + "," + getCantidadString() + "," + marca + "," + modelo;
+            return id + " - " + categoria + " - " + nombre + " - " + marca + " - " + modelo + " - Precio: " + getPrecioString() + " - Cantidad: " + getCantidadString();
         }
-        else if (getCategoria() == "Ferreteria" || getCategoria() == "ferreteria")
+        else if (categoria == "Ferreteria" || categoria == "ferreteria")
         {
-            return id + "," + categoria + "," + "," + getPrecioString() + nombre + "," + getCantidadString() + "," + tipo + "," + marca + "," + modelo;
+            return id + " - " + categoria + " - " + nombre + " - " + tipo + " - " + marca + " - " + modelo + " - Precio: " + getPrecioString() + " - Cantidad: " + getCantidadString();
         }
-        else if (getCategoria() == "Jugueteria" || getCategoria() == "jugueteria")
+        else if (categoria == "Jugueteria" || categoria == "jugueteria")
         {
-            return id + "," + categoria + "," + "," + getPrecioString() + nombre + "," + getCantidadString() + "," + marca + "," + esStringEducativo();
+            return id + " - " + categoria + " - " + nombre + " - " + marca + " - " + esStringEducativo() + " - Precio: " + getPrecioString() + " - Cantidad: " + getCantidadString();
         }
-        else if (getCategoria() == "Libreria" || getCategoria() == "libreria")
+        else if (categoria == "Libreria" || categoria == "libreria")
         {
-            return id + "," + categoria + "," + "," + getPrecioString() + nombre + "," + getCantidadString() + "," + autor + "," + editorial;
+            return id + " - " + categoria + " - " + nombre + " - " + autor + " - " + editorial + " - Precio: " + getPrecioString() + " - Cantidad: " + getCantidadString();
         }
         else
         {
-            return "Categoria no valida";
+            return "Categoria no valida o vacia";
         }
     }
 };

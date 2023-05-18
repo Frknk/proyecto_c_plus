@@ -29,7 +29,15 @@ public:
         cliente_codigo = _cliente_codigo;
     }
 
+    void setDatos(string _apellido, string _nombre, string _direccion, string _telefono, string _DNI){
+        setApellido(_apellido);
+        setNombre(_nombre);
+        setDireccion(_direccion);
+        setTelefono(_telefono);
+        setDNI(_DNI);
+    }
+
     string getDatos(){
-        return "Datos del cliente: \n " + cliente_codigo + " " + getApellido() + " " + getNombre();
+        return "Datos del cliente: \n " + cliente_codigo + " " + getApellido() + " " + getNombre() + " " + getDNI();
     }
 };

@@ -9,7 +9,7 @@ protected:
     string c_codigo, c_contrasena;
 
 public:
-    Cajero(string _c_codigo = "", string _c_contrasena = "", string _apellido, string _nombre , string _direccion, string _telefono, string _DNI) : Persona(_nombre, _apellido, _direccion, _telefono, _DNI)
+    Cajero(string _c_codigo = "", string _c_contrasena = "", string _apellido= "", string _nombre= "" , string _direccion= "", string _telefono= "", string _DNI= "") : Persona(_nombre, _apellido, _direccion, _telefono, _DNI)
     {
         c_codigo = _c_codigo;
         c_contrasena = _c_contrasena;
@@ -18,7 +18,7 @@ public:
     // Metodos
     string getDatos()
     {
-        return "Datos del cajero: \n " + c_codigo + " " + getApellido() + " " + getNombre();
+        return "Datos del cajero: \n " + getApellido() + " " + getNombre();
     }
 
     string getCodigo()
